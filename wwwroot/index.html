@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Jogo de Raciocinio Lógico</title>
+</head>
+<body class="bg-zinc-900 text-white min-h-screen flex flex-col">
+
+    <header class="sticky top-0 z-50">
+        <nav class="bg-zinc-800/90 backdrop-blur border-b border-zinc-700 px-6 py-4 flex items-center justify-between">
+            <span class="text-lg font-bold">Jogo de Raciocínio Lógico com Mecânicas de RPG</span>
+            <div class="flex gap-6 text-sm text-zinc-300">
+                <a href="#inicio" class="hover:text-white transition">Início</a>
+                <a href="#download" class="hover:text-white transition">Download</a>
+                <a href="#gameplay" class="hover:text-white transition">Gameplay</a>
+                <a href="#sobre" class="hover:text-white transition">Sobre</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1">
+
+        <section id="inicio" class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-24">
+            <h1 class="text-6xl font-extrabold mb-4 tracking-tight">Jogo de Raciocínio Lógico com Mecânicas de RPG</h1>
+            <p class="text-zinc-400 text-xl max-w-2xl mb-2">
+                Resumo do Jogo.
+            </p>
+            <p class="text-zinc-500 text-base max-w-xl">
+                Descrição super detalhada do jogo <br>
+                que vai deixar os jogadores engajados
+            </p>
+            <a href="#download" class="mt-10 px-8 py-3 bg-white text-zinc-900 font-semibold rounded-full hover:bg-zinc-200 transition">
+                Baixar agora
+            </a>
+        </section>
+
+        <section id="download" class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-24 bg-zinc-800">
+            <h2 class="text-4xl font-bold mb-4">Download</h2>
+            <p class="text-zinc-400 mb-2">Versão atual: <span class="text-white font-semibold">v1.0.0</span></p>
+            <p class="text-zinc-500 text-sm mb-10"></p>
+            <a href="/api/game/download" class="px-10 py-4 bg-white text-zinc-900 font-bold text-lg rounded-full hover:bg-zinc-200 transition">
+                Baixar o Jogo
+            </a>
+            <p class="text-zinc-600 text-xs mt-6">Gratuito. Sem anúncios. Sem frescura.</p>
+        </section>
+
+        <section id="gameplay" class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-24">
+            <h2 class="text-4xl font-bold mb-4">Gameplay</h2>
+            <p class="text-zinc-400 mb-10">Veja o jogo em ação antes de baixar.</p>
+            <div class="w-full max-w-3xl aspect-video bg-zinc-800 rounded-2xl flex items-center justify-center border border-zinc-700">
+
+                <!-- <iframe class="w-full h-full rounded-2xl" src="" allowfullscreen></iframe> -->
+                <span class="text-zinc-600 text-sm">Video muito bem editado.</span>
+            </div>
+        </section>
+
+        <section id="sobre" class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-24 bg-zinc-800">
+            <h2 class="text-4xl font-bold mb-4">Sobre os Desenvolvedores</h2>
+            <p class="text-zinc-400 max-w-xl mb-12">
+                Uma equipe pequena apaixonada por jogos e raciocínio lógico. Fale um pouco sobre vocês aqui.
+            </p>
+            <div class="flex flex-wrap justify-center gap-8">
+
+                <div class="bg-zinc-700 rounded-2xl p-6 w-56 flex flex-col items-center gap-3">
+                    <div class="w-20 h-20 rounded-full bg-zinc-500 flex items-center justify-center text-2xl">
+                        👤
+                    </div>
+                    <p class="font-semibold text-lg">João Guilherme Faria</p>
+                    <p class="text-zinc-400 text-sm">Desenvolvedor</p>
+                </div>
+
+                <div class="bg-zinc-700 rounded-2xl p-6 w-56 flex flex-col items-center gap-3">
+                    <div class="w-20 h-20 rounded-full bg-zinc-500 flex items-center justify-center text-2xl">
+                        👤
+                    </div>
+                    <p class="font-semibold text-lg">Johnny Mukai</p>
+                    <p class="text-zinc-400 text-sm">Desenvolvedor</p>
+                </div>
+
+                <div class="bg-zinc-700 rounded-2xl p-6 w-56 flex flex-col items-center gap-3">
+                    <div class="w-20 h-20 rounded-full bg-zinc-500 flex items-center justify-center text-2xl">
+                        👤
+                    </div>
+                    <p class="font-semibold text-lg">Thais Capucho</p>
+                    <p class="text-zinc-400 text-sm">Desenvolvedor</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-zinc-800 border-t border-zinc-700 text-center text-sm text-zinc-500 py-6">
+        <p>Nenhum direito reservado</p>
+    </footer>
+
+    <!-- Smooth scroll -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+
+</body>
+</html>
