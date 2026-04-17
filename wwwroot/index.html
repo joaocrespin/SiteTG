@@ -3,108 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Jogo de Raciocinio Lógico</title>
+    <title>Jogo de Estímulo Cognitivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/site.css">
 </head>
-<body class="bg-zinc-900 text-white min-h-screen flex flex-col">
+<body>
 
-    <header class="sticky top-0 z-50">
-        <nav class="bg-zinc-800/90 backdrop-blur border-b border-zinc-700 px-6 py-4 flex items-center justify-between">
-            <span class="text-lg font-bold">Jogo de Raciocínio Lógico com Mecânicas de RPG</span>
-            <div class="flex gap-6 text-sm text-zinc-300">
-                <a href="#inicio" class="hover:text-white transition">Início</a>
-                <a href="#download" class="hover:text-white transition">Download</a>
-                <a href="#gameplay" class="hover:text-white transition">Gameplay</a>
-                <a href="#sobre" class="hover:text-white transition">Sobre</a>
-            </div>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <span class="logo">⚔ Jogo de Estímulo Cognitivo</span>
+        <ul class="nav-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#gameplay">Gameplay</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main class="flex-1">
+<section id="inicio">
+    <h1 class="hero-title">Jogo de Estímulo Cognitivo</h1>
+    <p class="hero-sub">Com Elementos de RPG</p>
+    <div class="gold-rule"></div>
+    <p class="hero-desc">Exatamente o que ta escrito aqui em cima.</p>
+    <a href="#download" class="btn-hero">▶ Jogar</a>
 
-        <section id="inicio" class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-24">
-            <h1 class="text-6xl font-extrabold mb-4 tracking-tight">Jogo de Raciocínio Lógico com Mecânicas de RPG</h1>
-            <p class="text-zinc-400 text-xl max-w-2xl mb-2">
-                Resumo do Jogo.
-            </p>
-            <p class="text-zinc-500 text-base max-w-xl">
-                Descrição super detalhada do jogo <br>
-                que vai deixar os jogadores engajados
-            </p>
-            <a href="#download" class="mt-10 px-8 py-3 bg-white text-zinc-900 font-semibold rounded-full hover:bg-zinc-200 transition">
-                Baixar agora
-            </a>
-        </section>
-
-        <section id="download" class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-24 bg-zinc-800">
-            <h2 class="text-4xl font-bold mb-4">Download</h2>
-            <p class="text-zinc-400 mb-2">Versão atual: <span class="text-white font-semibold">v1.0.0</span></p>
-            <p class="text-zinc-500 text-sm mb-10"></p>
-            <a href="/api/game/download" class="px-10 py-4 bg-white text-zinc-900 font-bold text-lg rounded-full hover:bg-zinc-200 transition">
-                Baixar o Jogo
-            </a>
-            <p class="text-zinc-600 text-xs mt-6">Gratuito. Sem anúncios. Sem frescura.</p>
-        </section>
-
-        <section id="gameplay" class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-24">
-            <h2 class="text-4xl font-bold mb-4">Gameplay</h2>
-            <p class="text-zinc-400 mb-10">Veja o jogo em ação antes de baixar.</p>
-            <div class="w-full max-w-3xl aspect-video bg-zinc-800 rounded-2xl flex items-center justify-center border border-zinc-700">
-
-                <!-- <iframe class="w-full h-full rounded-2xl" src="" allowfullscreen></iframe> -->
-                <span class="text-zinc-600 text-sm">Video muito bem editado.</span>
-            </div>
-        </section>
-
-        <section id="sobre" class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-24 bg-zinc-800">
-            <h2 class="text-4xl font-bold mb-4">Sobre os Desenvolvedores</h2>
-            <p class="text-zinc-400 max-w-xl mb-12">
-                Uma equipe pequena apaixonada por jogos e raciocínio lógico. Fale um pouco sobre vocês aqui.
-            </p>
-            <div class="flex flex-wrap justify-center gap-8">
-
-                <div class="bg-zinc-700 rounded-2xl p-6 w-56 flex flex-col items-center gap-3">
-                    <div class="w-20 h-20 rounded-full bg-zinc-500 flex items-center justify-center text-2xl">
-                        👤
-                    </div>
-                    <p class="font-semibold text-lg">João Guilherme Faria</p>
-                    <p class="text-zinc-400 text-sm">Desenvolvedor</p>
+    <div class="carousel">
+        <button class="car-btn car-prev" onclick="slide(-1)">‹</button>
+        <div class="car-track-wrap">
+            <div class="car-track" id="track">
+                <div class="car-slide">
+                    <img src="img/screenshot-menu.png" alt="Menu principal" onerror="this.style.display='none'; this.parentElement.style.minHeight='200px'">
+                    <div class="sc-label">Menu Principal</div>
                 </div>
-
-                <div class="bg-zinc-700 rounded-2xl p-6 w-56 flex flex-col items-center gap-3">
-                    <div class="w-20 h-20 rounded-full bg-zinc-500 flex items-center justify-center text-2xl">
-                        👤
-                    </div>
-                    <p class="font-semibold text-lg">Johnny Mukai</p>
-                    <p class="text-zinc-400 text-sm">Desenvolvedor</p>
+                <div class="car-slide">
+                    <img src="img/screenshot-gameplay.png" alt="Gameplay" onerror="this.style.display='none'; this.parentElement.style.minHeight='200px'">
+                    <div class="sc-label">Batalha</div>
                 </div>
-
-                <div class="bg-zinc-700 rounded-2xl p-6 w-56 flex flex-col items-center gap-3">
-                    <div class="w-20 h-20 rounded-full bg-zinc-500 flex items-center justify-center text-2xl">
-                        👤
-                    </div>
-                    <p class="font-semibold text-lg">Thais Capucho</p>
-                    <p class="text-zinc-400 text-sm">Desenvolvedor</p>
-                </div>
-
             </div>
-        </section>
+        </div>
+        <button class="car-btn car-next" onclick="slide(1)">›</button>
+        <div class="car-dots" id="dots"></div>
+    </div>
+</section>
 
-    </main>
+<section id="download">
+    <div class="inner">
+        <div class="dl-card reveal">
+            <span class="ver-badge">Versão 1.0.0 · Acesso Gratuito</span>
+            <h2 class="dl-title">Pronto para Jogar?</h2>
+            <p class="dl-meta">Windows 64-bit &nbsp;·&nbsp; ~XX MB &nbsp;·&nbsp; Sem instalação</p>
+            <a href="/api/game/download" class="btn-dl">⬇ &nbsp;Baixar o Jogo</a>
+            <p class="dl-note">Gratuito · Sem anúncios · Sem frescura</p>
+        </div>
+    </div>
+</section>
 
-    <footer class="bg-zinc-800 border-t border-zinc-700 text-center text-sm text-zinc-500 py-6">
-        <p>Nenhum direito reservado</p>
-    </footer>
+<section id="gameplay">
+    <div class="inner">
+        <span class="s-eye reveal">✦ Em Ação</span>
+        <h2 class="s-title reveal">Veja Antes de Baixar</h2>
+        <p class="s-desc reveal" style="margin: 0 auto;">
+            Assista ao gameplay e descubra como a mecânica de raciocínio lógico se integra ao combate em RPG.
+        </p>
+        <div class="video-wrap reveal">
+            <div class="video-ph">
+                <div class="play-ring">▶</div>
+                <p>Colar o iframe do YouTube aqui</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Smooth scroll -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(link => {
-            link.addEventListener('click', e => {
-                e.preventDefault();
-                document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
+<section id="sobre">
+    <div class="inner">
+        <span class="s-eye reveal">✦ Os Criadores</span>
+        <h2 class="s-title reveal">Sobre o Projeto</h2>
+        <div class="sobre-grid">
+            <div class="sobre-text reveal">
+                <p>Aqui a gente fala sobre o jogo e de onde veio a ideia</p>
+                <p>Aqui a gente fala da faculdade e sobre ser um TG</p>
+            </div>
+            <div class="devs reveal">
+                <div class="dev">
+                    <span class="dev-selector">▶</span>
+                    <div class="dev-av">JM</div>
+                    <div>
+                        <div class="dev-name">Johnny Mukai</div>
+                        <div class="dev-role">Desenvolvimento</div>
+                    </div>
+                </div>
+                <div class="dev">
+                    <span class="dev-selector">▶</span>
+                    <div class="dev-av">JG</div>
+                    <div>
+                        <div class="dev-name">João Guilherme Faria</div>
+                        <div class="dev-role">Desenvolvimento</div>
+                    </div>
+                </div>
+                <div class="dev">
+                    <span class="dev-selector">▶</span>
+                    <div class="dev-av">TC</div>
+                    <div>
+                        <div class="dev-name">Thais Capucho</div>
+                        <div class="dev-role">Desenvolvimento</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<footer>
+    <p>© 2026 · Nenhum direito reservado</p>
+</footer>
+
+<script src="/js/site.js"></script>
 </body>
 </html>
