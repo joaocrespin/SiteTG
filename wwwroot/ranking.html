@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking - NeuroMoblust</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <span class="logo">⚔ Jogo de Estímulo Cognitivo</span>
+        <ul class="nav-links">
+            <li><a href="/index.html">Início</a></li>
+            <li><a href="#ranking">Ranking</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="ranking">
+    <div class="inner">
+        <span class="s-eye reveal">Melhores jogadores</span>
+        <h2 class="s-title reveal">Ranking Global</h2>
+        <p class="s-desc reveal">Os aventureiros com mais experiência acumulada no mundo de NeuroMoblust.</p>
+
+        <div class="ranking-wrap reveal" style="margin-top: 2.5rem;">
+            <div class="ranking-header">
+                <span>Pos.</span>
+                <span>Jogador</span>
+                <span>XP</span>
+            </div>
+            <div id="ranking-list">
+                <div class="ranking-loading">
+                    <span class="loading-dot"></span>
+                    Carregando ranking...
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <button class="btn-refresh" id="btn-refresh">Atualizar</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 · Nenhum direito reservado</p>
+</footer>
+
+<script src="/js/ranking.js"></script>
+</body>
+</html>
