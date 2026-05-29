@@ -96,7 +96,7 @@ async function loadRanking() {
         return;
     }
 
-    list.innerHTML = '<div class="ranking-loading"><span class="loading-dot"></span> Carregando ranking...</div>';
+    list.innerHTML = '<tr class="ranking-loading-row"><td colspan="3"><span class="loading-dot"></span> Carregando ranking...</td></tr>';
 
     try {
         const config = await getSupabaseConfig();
@@ -115,7 +115,7 @@ async function loadRanking() {
         const data = await res.json();
 
         if (!data || data.length === 0) {
-            list.innerHTML = '<div class="ranking-empty">Nenhum jogador no ranking ainda. Seja o primeiro!</div>';
+            list.innerHTML = '<tr class="ranking-empty-row"><td colspan="3">Nenhum jogador no ranking ainda. Seja o primeiro!</td></tr>';
             return;
         }
 
@@ -126,11 +126,11 @@ async function loadRanking() {
             const position = `${i + 1}º`;
 
             return `
-            <div class="ranking-row ${i < 3 ? 'top-' + (i + 1) : ''}">
-                <span class="rank-pos">${position}</span>
-                <span class="rank-name">${escapeHtml(name)}</span>
-                <span class="rank-xp">${safeXp.toLocaleString('pt-BR')} XP</span>
-            </div>
+            <tr class="ranking-row ${i < 3 ? 'top-' + (i + 1) : ''}">
+                <td class="rank-pos">${position}</td>
+                <td class="rank-name">${escapeHtml(name)}</td>
+                <td class="rank-xp">${safeXp.toLocaleString('pt-BR')} XP</td>
+            </tr>
         `;
         }).join('');
 
@@ -151,9 +151,9 @@ function escapeHtml(str) {
 
 function renderFallbackRows(count = 10) {
     return `
-        <div class="ranking-row">
-            Não foi possível buscar o ranking
-        </div>
+        <tr class="ranking-empty-row">
+            <td colspan="3">Não foi possível buscar o ranking</td>
+        </tr>
     `;
 }
 

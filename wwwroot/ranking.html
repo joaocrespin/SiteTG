@@ -23,24 +23,32 @@
     <div class="inner">
         <span class="s-eye reveal">Melhores jogadores</span>
         <h2 class="s-title reveal">Ranking Global</h2>
-        <p class="s-desc reveal">Os aventureiros com mais experiência acumulada no mundo de NeuroMoblust.</p>
+        <p class="s-desc reveal">Os aventureiros com mais experiência acumulada.</p>
 
-        <div class="ranking-wrap reveal" style="margin-top: 2.5rem;">
-            <div class="ranking-header">
-                <span>Pos.</span>
-                <span>Jogador</span>
-                <span>XP</span>
+        
+            <div class="ranking-table-wrap">
+                <table class="ranking-table" aria-label="Ranking de jogadores">
+                    <thead>
+                        <tr>
+                            <th scope="col">Posição</th>
+                            <th scope="col">Jogador</th>
+                            <th scope="col">XP</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ranking-list">
+                        <tr class="ranking-loading-row">
+                            <td colspan="3">
+                                <span class="loading-dot"></span>
+                                Carregando ranking...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div id="ranking-list">
-                <div class="ranking-loading">
-                    <span class="loading-dot"></span>
-                    Carregando ranking...
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 1.5rem;">
-                <button class="btn-refresh" id="btn-refresh">Atualizar</button>
-            </div>
-        </div>
+            <!-- <div style="text-align: center; margin-top: 1.5rem;">
+                <button class="btn-refresh" id="btn-refresh">Atualizar</button> 
+            </div> -->
+                                
     </div>
 </section>
 
