@@ -76,7 +76,7 @@ async function getSupabaseConfig() {
         return supabaseConfig;
     }
 
-    const res = await fetch('/api/config/supabase');
+    const res = await fetch('/api/game/config/supabase');
     if (!res.ok) {
         throw new Error('Config indisponível');
     }
