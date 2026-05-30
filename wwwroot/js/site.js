@@ -4,6 +4,8 @@ const dotsEl = document.getElementById('dots');
 let cur = 0;
 let timer;
 
+document.getElementById('btn-download').href = '/api/game/download';
+
 // Cria dots 
 Array.from(slides).forEach((_, i) => {
     const d = document.createElement('button');

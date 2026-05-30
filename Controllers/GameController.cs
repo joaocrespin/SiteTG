@@ -22,4 +22,16 @@ public class GameController : ControllerBase
         var fileBytes = System.IO.File.ReadAllBytes(filePath);
         return File(fileBytes, "application/zip", "jogo.zip");
     }
+
+    [HttpGet("config/supabase")]
+    public IActionResult SupabaseConfig()
+    {
+        var url = Environment.GetEnvironmentVariable("SUPABASE_URL");
+        var key = Environment.GetEnvironmentVariable("SUPABASE_KEY");
+
+        if (string.IsNullOrEmpty(url) || string.IsNullOrEmpty(key))
+            return NotFound("Config não encontrada");
+
+        return Ok(new { url, key });
+    }
 }
