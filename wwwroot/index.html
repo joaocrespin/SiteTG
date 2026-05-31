@@ -23,29 +23,42 @@
 </header>
 
 <section id="inicio">
+    <p class="eyebrow">Estimule sua mente</p>
     <h1 class="hero-title">Jogo de Estímulo Cognitivo</h1>
-    <p class="hero-sub">Com Elementos de RPG</p>
+    <p class="hero-sub">com Elementos de RPG</p>
     <div class="gold-rule"></div>
-    <p class="hero-desc">Exatamente o que ta escrito aqui em cima.</p>
+    <p class="hero-desc">Enfrente inimigos resolvendo desafios de memória, agilidade mental, foco, raciocínio lógico e coordenação motora. Evolua seu personagem e descubra um mundo onde a mente é sua maior arma.</p>
     <a href="#download" class="btn-hero">▶ Jogar</a>
 
     <div class="carousel">
-        <button class="car-btn car-prev" onclick="slide(-1)">‹</button>
-        <div class="car-track-wrap">
-            <div class="car-track" id="track">
-                <div class="car-slide">
-                    <img src="img/screenshot-menu.png" alt="Menu principal" onerror="this.style.display='none'; this.parentElement.style.minHeight='200px'">
-                    <div class="sc-label">Menu Principal</div>
-                </div>
-                <div class="car-slide">
-                    <img src="img/screenshot-gameplay.png" alt="Gameplay" onerror="this.style.display='none'; this.parentElement.style.minHeight='200px'">
-                    <div class="sc-label">Batalha</div>
-                </div>
+    <button class="car-btn car-prev" onclick="slide(-1)">&#8249;</button>
+    <div class="car-track-wrap">
+        <div class="car-track" id="track">
+            <div class="car-slide">
+                <img src="img/screenshot-menu1.png" alt="Menu principal" onerror="this.style.display='none'; this.parentElement.style.minHeight='200px'">
+                <div class="sc-label">Menu Principal</div>
+            </div>
+            <div class="car-slide">
+                <img src="img/screenshot-gameplay.png" alt="Gameplay" onerror="this.style.display='none'; this.parentElement.style.minHeight='200px'">
+                <div class="sc-label">Batalha</div>
+            </div>
+            <div class="car-slide">
+                <img src="img/screenshot-map.png" alt="Mapa" onerror="this.style.display='none'; this.parentElement.style.minHeight='200px'">
+                <div class="sc-label">Mapa de Fases</div>
+            </div>
+            <div class="car-slide">
+                <img src="img/screenshot-talent-tree.png" alt="Árvore de talentos" onerror="this.style.display='none'; this.parentElement.style.minHeight='200px'">
+                <div class="sc-label">Árvore de Talentos</div>
+            </div>
+            <div class="car-slide">
+                <img src="img/screenshot-shop.png" alt="Loja" onerror="this.style.display='none'; this.parentElement.style.minHeight='200px'">
+                <div class="sc-label">Loja</div>
             </div>
         </div>
-        <button class="car-btn car-next" onclick="slide(1)">›</button>
-        <div class="car-dots" id="dots"></div>
     </div>
+    <button class="car-btn car-next" onclick="slide(1)">&#8250;</button>
+    <div class="car-dots" id="dots"></div>
+</div>
 </section>
 
 <section id="download">
@@ -53,9 +66,9 @@
         <div class="dl-card reveal">
             <span class="ver-badge">Versão 1.0.0 · Acesso Gratuito</span>
             <h2 class="dl-title">Pronto para Jogar?</h2>
-            <p class="dl-meta">Windows 64-bit &nbsp;·&nbsp; ~XX MB &nbsp;·&nbsp; Sem instalação</p>
+            <p class="dl-meta">Windows 64-bit &nbsp;·&nbsp; Sem instalação</p>
             <!-- <a href="/api/game/download" class="btn-dl">⬇ &nbsp;Baixar o Jogo</a> -->
-             <a href="#" id="btn-download" class="btn-dl">Baixar o Jogo</a>
+            <a href="#" id="btn-download" class="btn-dl">Baixar o Jogo</a>
             <p class="dl-note">Gratuito · Sem anúncios · Sem frescura</p>
         </div>
     </div>
@@ -63,15 +76,15 @@
 
 <section id="gameplay">
     <div class="inner">
-        <span class="s-eye reveal">✦ Em Ação</span>
+        <span class="s-eye reveal">Em Ação</span>
         <h2 class="s-title reveal">Veja Antes de Baixar</h2>
         <p class="s-desc reveal" style="margin: 0 auto;">
-            Assista ao gameplay e descubra como a mecânica de raciocínio lógico se integra ao combate em RPG.
+            Assista ao gameplay e veja como os desafios cognitivos se integram ao combate em RPG.
         </p>
         <div class="video-wrap reveal">
             <div class="video-ph">
                 <div class="play-ring">▶</div>
-                <p>Colar o iframe do YouTube aqui</p>
+                <p>Em breve</p>
             </div>
         </div>
     </div>
@@ -79,12 +92,14 @@
 
 <section id="sobre">
     <div class="inner">
-        <span class="s-eye reveal">✦ Os Criadores</span>
-        <h2 class="s-title reveal">Sobre o Projeto</h2>
+        <span class="s-eye reveal">O Projeto</span>
+        <h2 class="s-title reveal">Sobre o Jogo de Estímulo Cognitivo</h2>
+
         <div class="sobre-grid">
             <div class="sobre-text reveal">
-                <p>Aqui a gente fala sobre o jogo e de onde veio a ideia</p>
-                <p>Aqui a gente fala da faculdade e sobre ser um TG</p>
+                <p>Jogo de Estímulo Cognitivo é um jogo digital desenvolvido como Trabalho de Graduação na área de jogos educacionais, com foco no aprimoramento das habilidades cognitivas por meio de mecânicas de RPG.</p>
+                <p>O jogo aborda cinco habilidades cognitivas, memória, agilidade mental, foco, raciocínio lógico e coordenação motora, apresentadas como desafios durante batalhas contra inimigos.</p>
+                <p>O projeto foi desenvolvido com o motor de jogo Godot Engine, utilizando GDScript como linguagem principal, e busca demonstrar que é possível unir entretenimento e aprendizagem em uma experiência interativa e envolvente.</p>
             </div>
             <div class="devs reveal">
                 <div class="dev">
@@ -111,13 +126,21 @@
                         <div class="dev-role">Desenvolvimento</div>
                     </div>
                 </div>
+                <!-- <div class="dev">
+                    <span class="dev-selector">▶</span>
+                    <div class="dev-av">EE</div>
+                    <div>
+                        <div class="dev-name">Prof. Dr. Eduardo Enari</div>
+                        <div class="dev-role">Orientador</div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 · Nenhum direito reservado</p>
+    <p>© 2026 · Jogo de Estímulo Cognitivo · Trabalho de Graduação</p>
 </footer>
 
 <script src="/js/site.js"></script>
