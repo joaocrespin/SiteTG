@@ -14,13 +14,13 @@ public class GameController : ControllerBase
     [HttpGet("download")]
     public IActionResult Download()
     {
-        var filePath = Path.Combine(_env.WebRootPath, "downloads", "jogo.zip");
+        var filePath = Path.Combine(_env.WebRootPath, "downloads", "Estimulo_Cognitivo_com_Elementos_de_RPG.zip");
 
         if (!System.IO.File.Exists(filePath))
             return NotFound("Arquivo não encontrado.");
 
         var fileBytes = System.IO.File.ReadAllBytes(filePath);
-        return File(fileBytes, "application/zip", "jogo.zip");
+        return File(fileBytes, "application/zip", "Estimulo_Cognitivo_com_Elementos_de_RPG.zip");
     }
 
     [HttpGet("config/supabase")]
