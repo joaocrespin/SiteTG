@@ -1,49 +1,15 @@
-const track = document.getElementById('track');
-const slides = track ? track.children : [];
-const dotsEl = document.getElementById('dots');
-let cur = 0;
-let timer;
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
 
-if (track && dotsEl) {
-    Array.from(slides).forEach((_, i) => {
-        const d = document.createElement('button');
-        d.className = 'dot' + (i === 0 ? ' active' : '');
-        d.onclick = () => goTo(i);
-        dotsEl.appendChild(d);
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
     });
-}
 
-function goTo(n) {
-    if (!track || slides.length === 0) {
-        return;
-    }
-
-    cur = (n + slides.length) % slides.length;
-    track.style.transform = `translateX(-${cur * 100}%)`;
-    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === cur));
-}
-
-function slide(dir) {
-    goTo(cur + dir);
-}
-
-function startTimer() {
-    if (slides.length > 1) {
-        timer = setInterval(() => slide(1), 4000);
-    }
-}
-
-function resetTimer() {
-    clearInterval(timer);
-    startTimer();
-}
-
-startTimer();
-
-const carousel = document.querySelector('.carousel');
-if (carousel) {
-    carousel.addEventListener('mouseenter', () => clearInterval(timer));
-    carousel.addEventListener('mouseleave', startTimer);
+    // Fecha ao clicar num link
+    navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(a => {

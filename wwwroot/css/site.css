@@ -377,3 +377,42 @@ footer {
     .rank-name { font-size: 1rem; }
     .rank-xp { font-size: 0.75rem; }
 }
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--gold);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 760px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(10,12,17,0.97);
+        border-bottom: 1px solid rgba(240,180,41,0.18);
+        padding: 1rem 2rem;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 0.6rem 0;
+        font-size: 0.85rem;
+    }
+    
+    header { position: relative; }
+}

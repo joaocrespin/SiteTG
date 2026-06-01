@@ -6,6 +6,20 @@ let timer;
 
 document.getElementById('btn-download').href = '/api/game/download';
 
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    // Fecha ao clicar num link
+    navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+}
+
 // Cria dots 
 Array.from(slides).forEach((_, i) => {
     const d = document.createElement('button');
